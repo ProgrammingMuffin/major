@@ -7,7 +7,7 @@ def playText(text):
     speech.save("buffer.mp3")
     playsound("buffer.mp3")
     return 1
-
+    
 def speechToText():
     r=sr.Recognizer()
     with sr.Microphone() as source:

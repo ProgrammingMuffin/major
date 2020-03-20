@@ -8,5 +8,15 @@ def playText(text):
     playsound("buffer.mp3")
     return 1
 
-playText(sys.argv[1])
-print("Done")
+def speechToText():
+    r=sr.Recognizer()
+    with sr.Microphone() as source:
+        print('say something')
+        audio=r.listen(source)
+    try:
+        print('you said:\n'+r.recognize_google(audio))
+    except Exception:
+        print("an exception occured!: " + Exception)
+
+#test
+speechToText()

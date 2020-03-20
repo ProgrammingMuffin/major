@@ -8,5 +8,6 @@ def playText(text):
     playsound("buffer.mp3")
     return 1
 
+#test
 playText(sys.argv[1])
 print("Done")
